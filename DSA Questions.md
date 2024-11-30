@@ -260,5 +260,6 @@
 64. **Scramble String** – [LeetCode #87](https://leetcode.com/problems/scramble-string/)
 65. **Longest Increasing Path in a Matrix** – [LeetCode #329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 66. **Decode String** – [LeetCode #394](https://leetcode.com/problems/decode-string/)
+67. **Trapping Rain Water** – [LeetCode #42](https://leetcode.com/problems/trapping-rain-water/)
 
 
