@@ -104,8 +104,6 @@
 50. **Longest Substring with At Least K Repeating Characters** – [LeetCode #395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
 
 ## Stacks Queues
-H
-
 1. **Valid Parentheses** – [LeetCode #20](https://leetcode.com/problems/valid-parentheses/)
 2. **Implement Stack using Queues** – [LeetCode #225](https://leetcode.com/problems/implement-stack-using-queues/)
 3. **Implement Queue using Stacks** – [LeetCode #232](https://leetcode.com/problems/implement-queue-using-stacks/)
