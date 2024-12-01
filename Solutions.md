@@ -1,2 +1,3 @@
-leetcode 1 Done
-leetcode 242 Done
+1. lc 1
+2. lc 242
+3. lc 20
