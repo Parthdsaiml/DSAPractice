@@ -25,3 +25,13 @@ Remember this logic for problems like:
 - **Find Duplicate Files**  
 - **Group Shifted Strings**  
 
+### Key Points to Remember for Similar Problems (Learning from Mistakes):  
+
+- **Use Sorting for Pattern Matching:** Sorting strings creates a unique key for grouping patterns.  
+- **HashMap for Grouping:** Store sorted strings as keys and group anagrams in lists.  
+- **`putIfAbsent()` Shortcut:** Quickly initialize a list for new keys.  
+- **Efficient Lookup with Hashing:** Use HashMaps for O(1) average-time lookups.  
+- **Convert Arrays to Strings:** Use `new String(charArray)` after sorting.  
+- **Common Signature Trick:** Reduce inputs to a pattern (sorted or frequency-based) to group similar items.  
+
+**Tip:** For pattern-matching problems, **"Common pattern → HashMap grouping"** is the go-to approach! 💡
