@@ -63,4 +63,85 @@ Rerference https://github.com/Parthdsaiml/DSAPractice/blob/main/Mistakes/Learn%2
 - **When order doesn’t matter (like anagrams), use frequency counting as the pattern key.**
   - **Example:** Anagrams "eat", "tea", "ate" all have the same frequency pattern, so they can be grouped together.
 
-By using sorting or frequency counting, you can efficiently group similar strings and patterns, making the solution scalable and faster for larger datasets.
+By using sorting or frequency counting, you can efficiently group similar strings and patterns, making the solution scalable and faster for larger datasets
+
+
+Here’s a detailed breakdown of the two questions you provided, in the same structured format:  
+
+---
+
+## **1️⃣ Leetcode 27: Remove Element**  
+
+### **Key Concept: Two-Pointer Technique for In-Place Removal**  
+- The **two-pointer** approach efficiently removes elements without using extra space.  
+- One pointer (`i`) iterates through the array, while the other (`k`) tracks valid elements.  
+
+### **Example:**  
+- **Input:** `nums = [3, 2, 2, 3], val = 3`  
+- **Process:**  
+  - Iterate through `nums`, moving non-`val` elements to the front.  
+  - **Final array:** `[2, 2, _, _]` (Underscores `_` indicate ignored values).  
+- **Output:** `2` (new length, elements `[2, 2]`).  
+
+### **Why Two Pointers Work?**  
+- **Avoids shifting elements multiple times**, improving efficiency.  
+- **Works in O(n) time and O(1) space.**  
+
+---
+
+### **Key Techniques & Mistakes to Avoid:**  
+
+### **1. Use Two Pointers for In-Place Modification**  
+- **Concept:** One pointer (`i`) scans elements, another (`k`) places valid ones.  
+- **Mistake:** Using `.remove()` or `.pop()` repeatedly increases time complexity.  
+
+### **2. Preserve Order of Remaining Elements**  
+- **Concept:** Overwrite `val` occurrences without unnecessary swaps.  
+- **Mistake:** If not careful, elements may be swapped incorrectly, breaking order.  
+
+### **3. Return the New Length, Not the Modified Array**  
+- **Concept:** The function should return `k`, the count of remaining valid elements.  
+- **Mistake:** Modifying and returning the full array instead of the new size.  
+
+---
+
+### **Rule of Thumb for Similar Problems:**  
+📌 **"For in-place element removal, use the two-pointer technique to efficiently shift elements."**  
+
+---
+
+## **2️⃣ Leetcode 169: Majority Element**  
+
+### **Key Concept: Boyer-Moore Voting Algorithm**  
+- Since the majority element appears **more than `n/2` times**, it must exist.  
+- The **Boyer-Moore** algorithm efficiently finds it in **O(n) time and O(1) space.**  
+
+### **Example:**  
+- **Input:** `nums = [3, 2, 3]`  
+- **Process:**  
+  - **Initialize candidate** (`3`), track votes.  
+  - If same as candidate → **increase count**.  
+  - If different → **decrease count**.  
+  - If count reaches `0` → pick a new candidate.  
+- **Output:** `3` (majority element).  
+
+---
+
+### **Key Techniques & Mistakes to Avoid:**  
+
+### **1. Boyer-Moore Voting for O(n) Solution**  
+- **Concept:** The candidate that survives till the end must be the majority element.  
+- **Mistake:** Using sorting (`O(n log n)`) or a HashMap (`O(n)` space) unnecessarily.  
+
+### **2. Candidate Reset Mechanism**  
+- **Concept:** If count reaches zero, the next number becomes the new candidate.  
+- **Mistake:** Forgetting this step can lead to incorrect results.  
+
+### **3. Single-Pass Determination of Majority**  
+- **Concept:** No need for a second pass unless validation is required.  
+- **Mistake:** Running additional frequency checks when not needed.  
+
+---
+
+### **Rule of Thumb for Similar Problems:**  
+📌 **"When a majority element (> n/2) is guaranteed, use Boyer-Moore Voting for O(n) time and O(1) space."**  
