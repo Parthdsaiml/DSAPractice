@@ -60,3 +60,35 @@
 
 **Rule of Thumb:**  
 📌 **"When removing elements in-place, use two-pointer swapping. When finding majority elements, Boyer-Moore is king!"** 🚀
+
+### **Key Points to Remember for Similar Problems (Learning from Mistakes)**  
+
+#### **Leetcode 912 (Sort an Array) - Key Takeaways**  
+- **Merge Sort & QuickSort for Large Inputs:** Merge Sort (O(n log n)) ensures stable sorting, while QuickSort offers in-place efficiency.  
+- **Built-in Sorting (Timsort in Java/Python):** Always consider `Arrays.sort()` (Java) or `sorted()` (Python), as they use Timsort, an optimized O(n log n) approach.  
+- **Avoid Bubble Sort & Insertion Sort for Large Inputs:** These methods work in O(n²) time, making them impractical for large arrays.  
+- **Radix Sort for Integers:** When sorting only non-negative integers, Radix Sort (O(n)) can be faster than comparison-based sorts.  
+- **Edge Case Handling:**  
+  - Empty array or single-element array.  
+  - Already sorted or reverse sorted inputs.  
+  - Large datasets (consider heap sort for stability in memory).  
+
+**Tip:**  
+✅ **Use built-in sorting unless optimizing for memory. For integer sorting, consider Radix Sort for better performance!**  
+
+---
+
+#### **Leetcode 75 (Sort Colors) - Key Takeaways**  
+- **Dutch National Flag Algorithm:** Uses a three-way partitioning approach (O(n) time, O(1) space).  
+- **Three Pointers (`low`, `mid`, `high`):**  
+  - `low`: Separates 0s (left side).  
+  - `mid`: Moves through the array.  
+  - `high`: Separates 2s (right side).  
+- **Swap-Based Sorting:** Instead of using sorting algorithms, we swap elements in-place for efficiency.  
+- **Avoid Extra Space:** Sorting in-place without using extra memory is key for space-constrained problems.  
+- **Alternative Approaches:**  
+  - **Counting Sort:** Count occurrences of 0s, 1s, and 2s, then overwrite the array.  
+  - **Built-in Sort:** Works but isn’t optimal (O(n log n)).  
+
+**Tip:**  
+✅ **For sorting 3 distinct values (like 0,1,2), the Dutch National Flag algorithm is the best approach!** 🚀
