@@ -145,3 +145,120 @@ Here’s a detailed breakdown of the two questions you provided, in the same str
 
 ### **Rule of Thumb for Similar Problems:**  
 📌 **"When a majority element (> n/2) is guaranteed, use Boyer-Moore Voting for O(n) time and O(1) space."**  
+
+---
+
+# **1. Sort an Array (General Sorting Problem)**  
+
+### **📌 Algorithms to Solve It:**  
+1. **Quick Sort** – Best for random arrays, avg **O(n log n)**  
+2. **Merge Sort** – Stable, worst-case **O(n log n)**  
+3. **Heap Sort** – Efficient for large datasets, **O(n log n)**  
+4. **Counting Sort** – Best if values have a small range, **O(n)**  
+
+---
+
+### **📌 Flowchart (QuickSort Example)**
+```
+      Start
+        |
+   Check if array 
+   has 1 or 0 elem
+        |
+     No  Yes
+    /       \
+ Return    Done
+    |
+ Choose Pivot (middle element)
+    |
+Partition array:
+   - Left side < Pivot
+   - Right side > Pivot
+    |
+Recursively sort left & right parts
+    |
+Merge sorted parts
+    |
+      Done!
+```
+
+---
+
+### **📌 Time & Space Complexity Analysis**  
+| Algorithm  | Best Case | Average Case | Worst Case | Space Complexity |
+|------------|-----------|--------------|------------|------------------|
+| Quick Sort | O(n log n) | O(n log n)  | O(n²) (rare) | O(log n) (recursion) |
+| Merge Sort | O(n log n) | O(n log n)  | O(n log n) | O(n) (extra array) |
+| Heap Sort  | O(n log n) | O(n log n)  | O(n log n) | O(1) |
+| Counting Sort | O(n) | O(n) | O(n) | O(k) (extra space) |
+
+---
+
+### **📌 Learning from Mistakes (To Improve Further)**
+1. **Choosing the Wrong Sorting Algorithm** – Don’t use **QuickSort** if the array is already sorted (worst case **O(n²)**).  
+2. **Ignoring Stability** – **Merge Sort** is **stable**, while **QuickSort & HeapSort** are not (important for sorting objects).  
+3. **Extra Space Usage** – Merge Sort takes **O(n) space**, while QuickSort (in-place) is **O(log n)** due to recursion.  
+4. **For Small Range Values** – Use **Counting Sort** instead of comparison-based sorts like Merge/QuickSort.  
+
+---
+
+# **2. Sort Colors (Sorting 0, 1, 2 Only)**  
+
+### **📌 Algorithms to Solve It:**  
+1. **Dutch National Flag Algorithm (Best Approach)** – **O(n) time, O(1) space**  
+2. **Counting Sort Approach** – **O(n) time, O(1) space**  
+
+---
+
+### **📌 Flowchart (Dutch National Flag Algorithm)**
+```
+      Start
+        |
+   Set three pointers:
+   low=0, mid=0, high=n-1
+        |
+      While mid <= high
+        |
+      If arr[mid] == 0
+         Swap with low
+         Move low, mid
+        |
+      Else if arr[mid] == 1
+         Move mid forward
+        |
+      Else if arr[mid] == 2
+         Swap with high
+         Move high backward
+        |
+       Repeat
+        |
+       Done!
+```
+
+---
+
+### **📌 Time & Space Complexity Analysis**  
+| Algorithm  | Best Case | Average Case | Worst Case | Space Complexity |
+|------------|-----------|--------------|------------|------------------|
+| Dutch National Flag | O(n) | O(n)  | O(n) | O(1) |
+| Counting Sort | O(n) | O(n) | O(n) | O(1) |
+
+---
+
+### **📌 Learning from Mistakes (To Improve Further)**
+1. **Using Sorting Algorithms Like QuickSort** – Overkill for 0, 1, 2; **Dutch National Flag** is faster and in-place.  
+2. **Not Using a Single Pass Solution** – Counting Sort is **O(n)** but requires two passes; **Dutch Flag does it in one pass**.  
+3. **Swapping Incorrectly** – Always ensure **correct pointer updates** when swapping in Dutch National Flag.  
+4. **Overcomplicating Logic** – Don’t use unnecessary comparisons; three simple cases (0,1,2) are enough.  
+
+---
+
+### **📌 Final Takeaway (Pattern for Future Sorting Problems)**
+1. **Identify constraints** – Small range? Use **Counting Sort**. Random array? Use **QuickSort**.  
+2. **Check stability needs** – If order matters, go with **Merge Sort** over QuickSort.  
+3. **Choose in-place sorting if needed** – **Heap Sort or QuickSort** works if space is a concern.  
+4. **Always try an O(n) solution for special cases** – Like Dutch National Flag for 0,1,2 sorting.  
+
+---
+
+This **structured pattern** will help us solve more sorting problems **efficiently** in the future! 🚀
