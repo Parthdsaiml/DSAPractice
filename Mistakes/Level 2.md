@@ -92,3 +92,51 @@
 
 **Tip:**  
 ✅ **For sorting 3 distinct values (like 0,1,2), the Dutch National Flag algorithm is the best approach!** 🚀
+
+---
+
+### **Key Points to Remember for Similar Problems (Learning from Mistakes)**  
+
+#### **Leetcode 347 (Top K Frequent Elements) - Key Takeaways**  
+- **Heap (Priority Queue) for Efficient Top-K Selection:**  
+  - Use a **min-heap** of size **K** to maintain the top K frequent elements in O(n log k) time.  
+  - Instead of sorting the entire list, keep only K elements in the heap for efficiency.  
+- **HashMap for Frequency Counting:**  
+  - Store the frequency of each number in a **HashMap (O(n) time complexity)**.  
+- **Bucket Sort for Optimal Performance (O(n)):**  
+  - Store numbers in buckets based on frequency (`index = frequency count`).  
+  - Flatten the buckets to extract the top K elements efficiently.  
+- **Alternative Approach: QuickSelect (O(n) average time)**  
+  - QuickSelect can find the Kth largest element efficiently but is tricky to implement.  
+- **Edge Cases to Handle:**  
+  - K = 1 (return the most frequent element).  
+  - All elements have the same frequency.  
+  - Large K values close to array length.  
+
+**Tip:**  
+✅ **When asked for “Top K” elements, use Heap for efficiency and Bucket Sort for an O(n) alternative!**  
+
+---
+
+#### **Range Query (Sum or Min/Max over a Range) - Key Takeaways**  
+- **Segment Tree (O(log n) per query, O(n) build time):**  
+  - Best for **dynamic** range queries (sum, min, max, GCD, etc.).  
+  - Supports updates in **O(log n)**, making it better than brute force.  
+- **Fenwick Tree (Binary Indexed Tree, O(log n) per query & update):**  
+  - Simpler than segment trees but supports **prefix sum updates efficiently**.  
+  - Ideal when updates and queries are both needed.  
+- **Prefix Sum (O(1) query, O(n) precompute):**  
+  - Fastest for **static** sum queries (cumulative sum array).  
+  - Works only when the array **doesn’t change** after precomputing.  
+- **Mo’s Algorithm (O(√n) per query):**  
+  - Optimized for offline queries when updates are not needed.  
+  - Great when the number of queries is large compared to updates.  
+- **Edge Cases to Handle:**  
+  - Query range beyond array bounds.  
+  - Large input sizes (use **efficient data structures** like segment trees).  
+  - Array with duplicate values affecting min/max queries.  
+
+**Tip:**  
+✅ **For dynamic updates, use Segment Trees. For static range sums, Prefix Sum is the fastest!** 🚀  
+
+
