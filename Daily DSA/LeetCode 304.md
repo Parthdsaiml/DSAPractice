@@ -1,136 +1,92 @@
-### **Range Query (Sum, Minimum, Maximum, etc.)**  
+### **2D Range Sum Query – Immutable (Leetcode 304)**  
 
 #### **Problem Statement**  
-Given an array, efficiently process multiple queries to find the sum, minimum, or maximum in a given range `[L, R]`.  
-
----  
-
-#### **Test Cases**  
-1. **Sum Query**  
-   - Input: `arr = [1, 3, 5, 7, 9, 11]`, Query: `(1, 3)`  
-   - Output: `3 + 5 + 7 = 15`  
-
-2. **Minimum Query**  
-   - Input: `arr = [2, 6, 1, 8, 3, 5]`, Query: `(2, 5)`  
-   - Output: `1`  
-
-3. **Maximum Query**  
-   - Input: `arr = [4, 7, 2, 9, 5, 1]`, Query: `(1, 4)`  
-   - Output: `9`  
-
----  
-
-### **Approach 1: Brute Force (O(N) per Query)**  
-#### **Algorithm**  
-1. Loop through the array from index `L` to `R`.  
-2. Compute the sum, min, or max.  
-3. Return the result.  
-
-🔴 **Inefficient for multiple queries on large arrays.**  
-
----  
-
-### **Approach 2: Prefix Sum (O(1) per Sum Query, O(N) for Min/Max)**  
-#### **Algorithm for Sum Queries**  
-1. **Precompute a Prefix Sum Array:** `prefix[i] = sum(arr[0] to arr[i])`.  
-2. **Query in O(1):**  
-   - Sum of range `[L, R] = prefix[R] - prefix[L-1]`.  
-
-🔵 **Efficient for sum queries but not for min/max.**  
-
----  
-
-### **Approach 3: Segment Tree (O(log N) per Query, O(N) Build)**  
-#### **Algorithm**  
-1. **Build a Segment Tree** in `O(N)`.  
-2. **Answer Queries in O(log N)** using a divide-and-conquer approach.  
-3. **Supports updates in O(log N)**.  
-
-✅ **Efficient for sum, min, and max queries, even with updates.**  
+Given a `2D matrix`, multiple queries ask for the sum of elements in a given submatrix `(row1, col1) → (row2, col2)`.  
 
 ---
 
-### **Flowchart for Segment Tree Query**
+### **Example**  
+#### **Input:**  
+```plaintext
+matrix = [
+  [3,  0,  1,  4,  2],
+  [5,  6,  3,  2,  1],
+  [1,  2,  0,  1,  5],
+  [4,  1,  0,  1,  7],
+  [1,  0,  3,  0,  5]
+]
+Query: sumRegion(2, 1, 4, 3)
 ```
-[Start]
-   |
-   v
-If query range is completely inside node range:
-   |
-   v
-Return stored value
-   |
-   v
-If query range is outside node range:
-   |
-   v
-Return identity value (0 for sum, ∞ for min, -∞ for max)
-   |
-   v
-Otherwise, split into left and right children
-   |
-   v
-Recursively compute results
-   |
-   v
-Merge results and return
-   |
-   v
-[End]
+#### **Output:**  
+`8`  
+
+**Explanation:** The sum of elements inside the submatrix is:  
+```plaintext
+  2  0  1  
+  1  0  1  
+  0  3  0  
 ```
+Sum = `2 + 0 + 1 + 1 + 0 + 1 + 0 + 3 + 0 = 8`  
 
 ---
 
-### **Code Implementation (Segment Tree - Sum Query)**
+### **Approach: Prefix Sum (O(1) Query, O(m*n) Preprocessing)**  
+1. **Precompute a `prefixSum` matrix** where `prefix[i][j]` stores the sum of all elements from `(0,0) → (i,j)`.  
+2. **Query in O(1)** using the formula:  
+
+   \[
+   \text{sumRegion}(r1, c1, r2, c2) = \text{prefix}[r2][c2] - \text{prefix}[r1-1][c2] - \text{prefix}[r2][c1-1] + \text{prefix}[r1-1][c1-1]
+   \]
+
+   - This formula avoids looping by using previously computed sums.
+
+---
+
+### **Code (Java)**
 ```java
-class SegmentTree {
-    int[] segTree;
-    int n;
+class NumMatrix {
+    private int[][] prefixSum;
 
-    public SegmentTree(int[] arr) {
-        n = arr.length;
-        segTree = new int[4 * n];
-        build(arr, 0, 0, n - 1);
-    }
+    public NumMatrix(int[][] matrix) {
+        int m = matrix.length, n = matrix[0].length;
+        prefixSum = new int[m + 1][n + 1]; // Extra row & col to handle boundaries
 
-    private void build(int[] arr, int node, int left, int right) {
-        if (left == right) {
-            segTree[node] = arr[left];
-            return;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                prefixSum[i + 1][j + 1] = matrix[i][j] 
+                                        + prefixSum[i][j + 1] 
+                                        + prefixSum[i + 1][j] 
+                                        - prefixSum[i][j];
+            }
         }
-        int mid = (left + right) / 2;
-        build(arr, 2 * node + 1, left, mid);
-        build(arr, 2 * node + 2, mid + 1, right);
-        segTree[node] = segTree[2 * node + 1] + segTree[2 * node + 2]; // Sum
     }
 
-    public int query(int l, int r) {
-        return queryUtil(0, 0, n - 1, l, r);
-    }
-
-    private int queryUtil(int node, int left, int right, int ql, int qr) {
-        if (ql > right || qr < left) return 0;
-        if (ql <= left && qr >= right) return segTree[node];
-        int mid = (left + right) / 2;
-        return queryUtil(2 * node + 1, left, mid, ql, qr) + queryUtil(2 * node + 2, mid + 1, right, ql, qr);
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        return prefixSum[row2 + 1][col2 + 1] 
+             - prefixSum[row1][col2 + 1] 
+             - prefixSum[row2 + 1][col1] 
+             + prefixSum[row1][col1];
     }
 }
 ```
 
 ---
 
-### **Time and Space Complexity**
-| Approach       | Build Time | Query Time | Update Time | Space Complexity |
-|---------------|------------|------------|------------|------------------|
-| Brute Force   | O(1)       | O(N)       | O(1)       | O(1)             |
-| Prefix Sum    | O(N)       | O(1)       | O(N)       | O(N)             |
-| Segment Tree  | O(N)       | O(log N)   | O(log N)   | O(4N)            |
+### **Complexity Analysis**
+| Operation     | Time Complexity |
+|--------------|----------------|
+| Preprocessing | O(m × n)       |
+| Query        | O(1)            |
+| Space        | O(m × n)        |
 
 ---
 
-### **Conclusion**
-- **Prefix Sum:** Best for sum queries when updates are rare.  
-- **Segment Tree:** Best when queries and updates are frequent.  
-- **Fenwick Tree:** Alternative to Segment Tree with simpler implementation.  
+### **Key Insights**
+✅ **Why use an extra row & column?**  
+   - It simplifies boundary checks (no need for `if` conditions).  
 
-💡 **Use Segment Tree for real-time updates and frequent range queries.**
+✅ **Why subtract & add in the formula?**  
+   - Prevents double-counting overlapping regions.  
+
+✅ **Best for multiple queries**  
+   - Once `prefixSum` is built, each query takes O(1).
