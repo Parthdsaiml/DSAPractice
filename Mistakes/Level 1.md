@@ -262,3 +262,108 @@ Merge sorted parts
 ---
 
 This **structured pattern** will help us solve more sorting problems **efficiently** in the future! 🚀
+
+
+# **Top K Frequent Elements**  
+
+### **📌 Algorithms to Solve It:**  
+1. **Min Heap (Optimal Approach)** – **O(n log k) time, O(k) space**  
+2. **Bucket Sort (Alternative Approach)** – **O(n) time, O(n) space**  
+
+---
+
+### **📌 Flowchart (Min Heap Approach)**
+```
+      Start
+        |
+  Count frequency of each element
+        |
+  Push elements into Min Heap
+   (Heap size limited to k)
+        |
+  If heap size exceeds k
+    Remove smallest frequency
+        |
+  Extract elements from heap
+        |
+       Done!
+```
+
+---
+
+### **📌 Time & Space Complexity Analysis**  
+| Algorithm  | Best Case | Average Case | Worst Case | Space Complexity |
+|------------|-----------|--------------|------------|------------------|
+| Min Heap | O(n log k) | O(n log k) | O(n log k) | O(k) |
+| Bucket Sort | O(n) | O(n) | O(n) | O(n) |
+
+---
+
+### **📌 Learning from Mistakes (To Improve Further)**
+1. **Sorting the Entire Frequency Map** – Using a **heap** instead of sorting keeps it efficient.  
+2. **Not Maintaining Fixed Heap Size** – **Always remove the smallest frequency** when heap size exceeds k.  
+3. **Using Max Heap Instead of Min Heap** – **Min Heap** ensures that **least frequent element stays at root**, making replacement efficient.  
+4. **Overcomplicating Logic** – If `k` is large, **Bucket Sort can be better** than Min Heap.  
+
+---
+
+### **📌 Final Takeaway (Pattern for Future Frequency-Based Problems)**
+1. **Use Min Heap when dealing with "top K" problems** – Keeps memory limited to `k` elements.  
+2. **Consider Bucket Sort when dealing with small numbers** – Faster but takes more space.  
+3. **Always remove the smallest element when heap exceeds k** – Ensures top k frequent elements remain.  
+4. **Hashmaps + Heaps are powerful combos** – Use them whenever frequency counting is needed.  
+
+---
+
+This **structured pattern** will help us solve more **"top K elements"** problems efficiently! 🚀
+
+
+# **Range Sum Query (Prefix Sum Approach)**  
+
+### **📌 Algorithms to Solve It:**  
+1. **Prefix Sum (Optimal for Static Queries)** – **O(1) query time, O(n²) precompute time, O(n²) space**  
+2. **Fenwick Tree / Segment Tree (For Dynamic Updates)** – **O(log n) query & update time, O(n) space**  
+
+---
+
+### **📌 Flowchart (Prefix Sum Approach)**
+```
+      Start
+        |
+  Compute prefix sum for each row
+        |
+  For each sumRegion query:
+   - Get sum using prefix subtraction
+        |
+   Return the computed sum
+        |
+       Done!
+```
+
+---
+
+### **📌 Time & Space Complexity Analysis**  
+| Algorithm  | Query Time | Precompute Time | Update Time | Space Complexity |
+|------------|------------|-----------------|-------------|------------------|
+| Prefix Sum | O(1) | O(n²) | O(n²) (Recompute) | O(n²) |
+| Fenwick Tree | O(log n) | O(n log n) | O(log n) | O(n) |
+| Segment Tree | O(log n) | O(n) | O(log n) | O(n) |
+
+---
+
+### **📌 Learning from Mistakes (To Improve Further)**
+1. **Recomputing Sum Every Query** – Instead, **precompute prefix sums** for faster queries.  
+2. **Using Naive Nested Loops for Queries** – This takes **O(n²) per query**, too slow for large matrices.  
+3. **Ignoring Update Efficiency** – **Prefix sum is bad for updates**, use **Fenwick Tree / Segment Tree** for dynamic queries.  
+4. **Choosing Wrong Data Structures** – **Prefix Sum for static queries**, **Fenwick/Segment Tree for updates**.  
+
+---
+
+### **📌 Final Takeaway (Pattern for Future Range Queries)**
+1. **If queries are frequent but no updates** – Use **Prefix Sum** for **O(1) queries**.  
+2. **If updates are needed** – Use **Fenwick Tree (BIT) or Segment Tree**.  
+3. **Precompute smartly** – Avoid recomputation and store cumulative values.  
+4. **Use 2D prefix sum for matrices** – Instead of looping over subarrays, **precompute** sums efficiently.  
+
+---
+
