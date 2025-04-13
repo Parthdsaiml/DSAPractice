@@ -67,3 +67,72 @@
 - **LeetCode**: Filter by “Top Interview Questions” and “JTG Tag.”  
 - **GeeksforGeeks**: JTG-specific interview archives.  
 
+---
+
+### 🧠 Arrays & Strings
+
+1.Two Su
+2.Find First and Last Position of Element in Sorted Arra
+3.Sort Colors (Dutch National Flag Problem
+4.Longest Substring Without Repeating Character
+5.Longest Palindromic Substrin
+6.Sliding Window Maximu
+7.Kth Smallest Element in a Sorted Matri
+8.Product of Array Except Sel
+9.Find the Duplicate Numbe
+10.Maximum Subarray (Kadane’s Algorithm
+
+---
+
+### 🔗 Linked Lists
+
+11 Reverse a Linked Lit
+12 Detect Cycle in a Linked Lit
+13 Merge Two Sorted Liss
+14 Remove Nth Node From End of Lit
+15 Split a Circular Linked List into Two Halvs
+16 Add Two Numbes
+17 Copy List with Random Pointr
+18 Intersection of Two Linked Liss
+19 LRU Cache Implementatin
+20 Flatten a Multilevel Doubly Linked Lit
+
+---
+
+### 🌲 Trees & Graphs
+
+2. Binary Tree Inorder Traveral
+2. Binary Tree Level Order Traveral
+2. Lowest Common Ancestor of a Binary Tee
+2. Validate Binary Search Tee
+2. Sum Root to Leaf Numbrs
+2. Burning Tree Probem
+2. Morris Traveral
+2. Number of Islads
+2. Clone Grph
+3. Course Schedule (Topological Sot)
+
+---
+
+### 🧮 Dynamic Programming
+
+1. House Rober
+2. Longest Increasing Subsequnce
+3. 0/1 Knapsack Prolem
+4. Edit Distnce
+5. Coin Chnge
+6. Partition Equal SubsetSum
+7. Maximum Product Subaray
+8. Frog Jump Prolem
+9. Unique Pths
+0. Word Beak
+
+---
+
+### 🧩 Miscellaneous
+41. Binary Search on Answer (e.g., Capacity to Ship Packages Within D ays)42. Kth Smallest Number in a Window of rray43. Implement Trie (Prefix ree)44. Median of Two Sorted Arays45. Regular Expression Mathing46. Sudoku Slver47. Find Median from Data Sream48. Top K Frequent Eleents49. Design Twitter (OOP Deign)50. Implement LFU ache
+
+--
+
+These problems cover a broad spectrum of topics and difficulty levels, reflecting the kind of questions JTG has been known to ask in interves. Practicing these will bolster your problem-solving skills and prepare you for various challenges you might encouter.
+
