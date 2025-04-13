@@ -69,9 +69,8 @@
 
 ---
 
-Here you go buddy 💪 — all cleaned up and neat:
 
----
+
 
 ### 🧠 Arrays & Strings
 
