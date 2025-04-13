@@ -69,70 +69,83 @@
 
 ---
 
+Here you go buddy 💪 — all cleaned up and neat:
+
+---
+
 ### 🧠 Arrays & Strings
 
-1.Two Su
-2.Find First and Last Position of Element in Sorted Arra
-3.Sort Colors (Dutch National Flag Problem
-4.Longest Substring Without Repeating Character
-5.Longest Palindromic Substrin
-6.Sliding Window Maximu
-7.Kth Smallest Element in a Sorted Matri
-8.Product of Array Except Sel
-9.Find the Duplicate Numbe
-10.Maximum Subarray (Kadane’s Algorithm
+1. Two Sum  
+2. Find First and Last Position of Element in Sorted Array  
+3. Sort Colors (Dutch National Flag Problem)  
+4. Longest Substring Without Repeating Characters  
+5. Longest Palindromic Substring  
+6. Sliding Window Maximum  
+7. Kth Smallest Element in a Sorted Matrix  
+8. Product of Array Except Self  
+9. Find the Duplicate Number  
+10. Maximum Subarray (Kadane’s Algorithm)  
 
 ---
 
 ### 🔗 Linked Lists
 
-11 Reverse a Linked Lit
-12 Detect Cycle in a Linked Lit
-13 Merge Two Sorted Liss
-14 Remove Nth Node From End of Lit
-15 Split a Circular Linked List into Two Halvs
-16 Add Two Numbes
-17 Copy List with Random Pointr
-18 Intersection of Two Linked Liss
-19 LRU Cache Implementatin
-20 Flatten a Multilevel Doubly Linked Lit
+11. Reverse a Linked List  
+12. Detect Cycle in a Linked List  
+13. Merge Two Sorted Lists  
+14. Remove Nth Node From End of List  
+15. Split a Circular Linked List into Two Halves  
+16. Add Two Numbers  
+17. Copy List with Random Pointer  
+18. Intersection of Two Linked Lists  
+19. LRU Cache Implementation  
+20. Flatten a Multilevel Doubly Linked List  
 
 ---
 
 ### 🌲 Trees & Graphs
 
-2. Binary Tree Inorder Traveral
-2. Binary Tree Level Order Traveral
-2. Lowest Common Ancestor of a Binary Tee
-2. Validate Binary Search Tee
-2. Sum Root to Leaf Numbrs
-2. Burning Tree Probem
-2. Morris Traveral
-2. Number of Islads
-2. Clone Grph
-3. Course Schedule (Topological Sot)
+21. Binary Tree Inorder Traversal  
+22. Binary Tree Level Order Traversal  
+23. Lowest Common Ancestor of a Binary Tree  
+24. Validate Binary Search Tree  
+25. Sum Root to Leaf Numbers  
+26. Burning Tree Problem  
+27. Morris Traversal  
+28. Number of Islands  
+29. Clone Graph  
+30. Course Schedule (Topological Sort)  
 
 ---
 
 ### 🧮 Dynamic Programming
 
-1. House Rober
-2. Longest Increasing Subsequnce
-3. 0/1 Knapsack Prolem
-4. Edit Distnce
-5. Coin Chnge
-6. Partition Equal SubsetSum
-7. Maximum Product Subaray
-8. Frog Jump Prolem
-9. Unique Pths
-0. Word Beak
+31. House Robber  
+32. Longest Increasing Subsequence  
+33. 0/1 Knapsack Problem  
+34. Edit Distance  
+35. Coin Change  
+36. Partition Equal Subset Sum  
+37. Maximum Product Subarray  
+38. Frog Jump Problem  
+39. Unique Paths  
+40. Word Break  
 
 ---
 
 ### 🧩 Miscellaneous
-41. Binary Search on Answer (e.g., Capacity to Ship Packages Within D ays)42. Kth Smallest Number in a Window of rray43. Implement Trie (Prefix ree)44. Median of Two Sorted Arays45. Regular Expression Mathing46. Sudoku Slver47. Find Median from Data Sream48. Top K Frequent Eleents49. Design Twitter (OOP Deign)50. Implement LFU ache
 
---
+41. Binary Search on Answer (e.g., Capacity to Ship Packages Within D Days)  
+42. Kth Smallest Number in a Window of Array  
+43. Implement Trie (Prefix Tree)  
+44. Median of Two Sorted Arrays  
+45. Regular Expression Matching  
+46. Sudoku Solver  
+47. Find Median from Data Stream  
+48. Top K Frequent Elements  
+49. Design Twitter (OOP Design)  
+50. Implement LFU Cache  
 
-These problems cover a broad spectrum of topics and difficulty levels, reflecting the kind of questions JTG has been known to ask in interves. Practicing these will bolster your problem-solving skills and prepare you for various challenges you might encouter.
+---
 
+You're locked and loaded now, bhai 🚀
