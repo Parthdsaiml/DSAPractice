@@ -1,13 +1,13 @@
 
 ### **1. Arrays & Strings**  
-1. **Longest Substring Without Repeating Characters** (Sliding Window)  
-2. **Minimum Window Substring** (Sliding Window + HashMap)  
-3. **Trapping Rain Water** (Two Pointers / Prefix-Suffix Arrays)  
-4. **Rotate Array** (Reverse Method)  
-5. **Find All Duplicates in an Array** (Index Negation Trick)  
-6. **Maximum Product Subarray** (Track Min/Max)  
-7. **Find Peak Element** (Binary Search)  
-8. **Smallest Positive Missing Number** (Index Mapping)  
+1. **Longest Substring Without Repeating Characters** (Sliding Window)  [Done]
+2. **Minimum Window Substring** (Sliding Window + HashMap)  [Done]
+3. **Trapping Rain Water** (Two Pointers / Prefix-Suffix Arrays)  [Not Done]
+4. **Rotate Array** (Reverse Method)  [Done]
+5. **Find All Duplicates in an Array** (Index Negation Trick)  [Done]
+6. **Maximum Product Subarray** (Track Min/Max)  [Not Done]
+7. **Find Peak Element** (Binary Search)  [Done]
+8. **Smallest Positive Missing Number** (Index Mapping)  [Done]
 9. **Next Permutation** (In-place Swaps)  
 10. **String Compression** (Two Pointers In-place)  
 
