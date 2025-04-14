@@ -20,7 +20,7 @@
 📍 **Venue for all rounds:**  
 *Dronacharya Group of Institutions, Greater Noida.*
 
-Let me know if you want tips for each section too 💪
+
 ---
 
 ### 1️⃣ **Tech MCQ**
